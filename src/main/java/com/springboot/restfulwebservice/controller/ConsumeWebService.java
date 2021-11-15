@@ -19,6 +19,8 @@ public class ConsumeWebService {
     @GetMapping("/template/products")
     public String getProductList(){
         HttpHeaders httpHeaders = new HttpHeaders();
+
+        //Yêu cầu trả về định dạng Json
         httpHeaders.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
         HttpEntity<String> entity = new HttpEntity<>(httpHeaders);
 
